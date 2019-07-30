@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void)
+{
+  int x = 0;
+  int fact = 1;
+
+  cout << "Enter num: ";
+  cin >> x;
+
+  if (x == 0 || x == 1)
+  {
+    fact = 1;
+    cout << "Factorial = " << fact << endl;
+    return 0;
+  }
+
+  else if (x < 0)
+  {
+    cout << "Input error!" << endl;
+    return 1;
+  }
+
+  while (x > 0)
+  {
+    fact *= x;
+    x--;
+  }
+
+  cout << "Factorial = " << fact << endl;
+
+
+  system("pause");
+  return 0;
+}
